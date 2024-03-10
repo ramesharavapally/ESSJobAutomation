@@ -1,0 +1,18 @@
+2024-02-16 11:58:28,066 - INFO - TestESSLovClass - test_create_lovs - Logged in successfully
+2024-02-16 11:58:45,003 - INFO - TestESSLovClass - test_create_lovs - ==============Start processing for LOV Ledger_Name_AARC1
+2024-02-16 11:58:47,134 - INFO - TestESSLovClass - test_create_lovs - End processing for LOV Ledger_Name_AARC1
+2024-02-16 11:58:50,660 - INFO - TestESSLovClass - test_create_lovs - ==============Start processing for LOV Source_AARC1
+2024-02-16 11:58:52,819 - INFO - TestESSLovClass - test_create_lovs - End processing for LOV Source_AARC1
+2024-02-16 11:58:56,349 - INFO - TestESSLovClass - test_create_lovs - ==============Start processing for LOV Period_Year_AARC1
+2024-02-16 11:58:58,553 - INFO - TestESSLovClass - test_create_lovs - End processing for LOV Period_Year_AARC1
+2024-02-16 11:59:01,914 - INFO - TestESSLovClass - test_create_lovs - ==============Start processing for LOV Period_Name_AARC1
+2024-02-16 11:59:04,229 - INFO - TestESSLovClass - test_create_lovs - End processing for LOV Period_Name_AARC1
+2024-02-16 11:59:07,669 - INFO - TestESSLovClass - test_create_lovs - ==============Start processing for LOV Status LOV_AARC1
+2024-02-16 11:59:10,369 - INFO - TestESSLovClass - test_create_lovs - End processing for LOV Status LOV_AARC1
+2024-02-16 11:59:13,703 - INFO - TestESSLovClass - test_create_lovs - ==============Start processing for LOV Batch LOV_AARC1
+2024-02-16 11:59:16,251 - INFO - TestESSLovClass - test_create_lovs - End processing for LOV Batch LOV_AARC1
+2024-02-16 11:59:19,464 - INFO - TestESSLovClass - test_create_lovs - ==============Start processing for LOV From_Period_AARC1
+2024-02-16 11:59:21,385 - INFO - TestESSLovClass - test_create_lovs - End processing for LOV From_Period_AARC1
+2024-02-16 11:59:24,511 - INFO - TestESSLovClass - test_create_lovs - ==============Start processing for LOV To_Period_AARC1
+2024-02-16 11:59:26,439 - INFO - TestESSLovClass - test_create_lovs - End processing for LOV To_Period_AARC1
+2024-02-16 11:59:26,479 - INFO - TestESSLovClass - test_create_lovs - ==============Process cmolpleted==========
