@@ -12,8 +12,16 @@ from selenium.common.exceptions import TimeoutException , NoSuchElementException
 import traceback
 from selenium.webdriver.common.keys import Keys
 from readexceldata import get_lovs_source_data
+import configparser
 
 class TestESSLovClass(BaseClass):
+
+    CONFIG_FILE = '..\config.ini'
+
+    def get_connection_details(self ):
+        config = configparser.ConfigParser()
+        config.read(self.CONFIG_FILE)
+        return config['CONFIG']['ERP_URL'], config['CONFIG']['username'], config['CONFIG']['password']
         
         
     def perform_cancel_action(self):
@@ -35,7 +43,10 @@ class TestESSLovClass(BaseClass):
     def test_create_lovs(self):        
         
         self.logger = SeleniumLogger(log_file='..\logs\lovs.log')
-        self.login('https://ebdt-dev1.fa.us2.oraclecloud.com' , 'krishnamurthy.Marella', 'Fusion$1234')           
+
+        url , username , password = self.get_connection_details()                  
+
+        self.login(url , username , password)           
         # self.login('https://fa-evog-dev1-saasfaprod1.fa.ocs.oraclecloud.com', 'Conversion.User', 'Apps@1234')
         self.navigate_to_setup_and_maintenance()
         self.navigate_to_tasks()

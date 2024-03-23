@@ -1,198 +1,25 @@
-2024-02-16 12:00:41,799 - INFO - TestESSJobClass - test_ess_job - Logged in successfully
-2024-02-16 12:00:46,753 - INFO - TestESSJobClass - test_ess_job - Start processing of job : AARC GL Journal FBDI Validation Report_15021
-2024-02-16 12:00:59,800 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Source and datatype String
-2024-02-16 12:01:15,204 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Source
-2024-02-16 12:01:15,254 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Period Year and datatype String
-2024-02-16 12:01:30,974 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Period Year
-2024-02-16 12:01:31,028 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Period Name and datatype String
-2024-02-16 12:01:46,743 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Period Name
-2024-02-16 12:01:46,795 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Status and datatype String
-2024-02-16 12:02:02,335 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Status
-2024-02-16 12:02:02,369 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Batch Name and datatype String
-2024-02-16 12:02:18,096 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Batch Name
-2024-02-16 12:02:18,139 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Creation Date From and datatype Date or time
-2024-02-16 12:02:23,641 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Creation Date From
-2024-02-16 12:02:23,680 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Creation Date To and datatype Date or time
-2024-02-16 12:02:29,303 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Creation Date To
-2024-02-16 12:02:29,339 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : From Period and datatype String
-2024-02-16 12:02:44,934 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : From Period
-2024-02-16 12:02:44,967 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : To Period and datatype String
-2024-02-16 12:03:01,045 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : To Period
-2024-02-16 12:03:01,089 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Ledger Name and datatype String
-2024-02-16 12:03:17,038 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Ledger Name
-2024-02-16 12:03:49,643 - DEBUG - TestESSJobClass - test_ess_job - confirmation_message Your changes were saved.
-2024-02-16 12:03:49,689 - INFO - TestESSJobClass - test_ess_job - End processing of job : AARC GL Journal FBDI Validation Report_15021
-2024-02-16 12:03:49,719 - INFO - TestESSJobClass - test_ess_job - Start processing of job : AARC GL Journal FBDI Validation Report_1502_2
-2024-02-16 12:03:54,293 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Source and datatype String
-2024-02-16 12:04:09,467 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Source
-2024-02-16 12:04:09,539 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Period Year and datatype String
-2024-02-16 12:04:24,964 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Period Year
-2024-02-16 12:04:24,994 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Period Name and datatype String
-2024-02-16 12:04:40,551 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Period Name
-2024-02-16 12:04:40,584 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Status and datatype String
-2024-02-16 12:04:56,154 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Status
-2024-02-16 12:04:56,189 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Batch Name and datatype String
-2024-02-16 12:05:11,723 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Batch Name
-2024-02-16 12:05:11,764 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Creation Date From and datatype Date or time
-2024-02-16 12:05:17,151 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Creation Date From
-2024-02-16 12:05:17,191 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Creation Date To and datatype Date or time
-2024-02-16 12:05:23,181 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Creation Date To
-2024-02-16 12:05:23,223 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : From Period and datatype String
-2024-02-16 12:05:38,823 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : From Period
-2024-02-16 12:05:38,871 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : To Period and datatype String
-2024-02-16 12:05:54,529 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : To Period
-2024-02-16 12:05:54,573 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Ledger Name and datatype String
-2024-02-16 12:06:10,675 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Ledger Name
-2024-02-16 12:06:41,558 - DEBUG - TestESSJobClass - test_ess_job - confirmation_message Your changes were saved.
-2024-02-16 12:06:41,595 - INFO - TestESSJobClass - test_ess_job - End processing of job : AARC GL Journal FBDI Validation Report_1502_2
-2024-02-20 12:50:14,160 - INFO - TestESSJobClass - test_ess_job - Logged in successfully
-2024-02-20 12:50:19,029 - INFO - TestESSJobClass - test_ess_job - Start processing of job : AARC GL Journal FBDI Validation Report_15021_10
-2024-02-20 12:50:31,082 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Source and datatype String
-2024-02-20 12:50:46,132 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Source
-2024-02-20 12:50:46,151 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Period Year and datatype String
-2024-02-20 12:51:01,684 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Period Year
-2024-02-20 12:51:01,718 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Period Name and datatype String
-2024-02-20 12:51:17,104 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Period Name
-2024-02-20 12:51:17,136 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Status and datatype String
-2024-02-20 12:51:32,895 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Status
-2024-02-20 12:51:32,906 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Batch Name and datatype String
-2024-02-20 12:51:48,871 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Batch Name
-2024-02-20 12:51:48,890 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Creation Date From and datatype Date or time
-2024-02-20 12:51:54,184 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Creation Date From
-2024-02-20 12:51:54,216 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Creation Date To and datatype Date or time
-2024-02-20 12:52:00,260 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Creation Date To
-2024-02-20 12:52:00,278 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : From Period and datatype String
-2024-02-20 12:52:15,546 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : From Period
-2024-02-20 12:52:15,578 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : To Period and datatype String
-2024-02-20 12:52:30,864 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : To Period
-2024-02-20 12:52:30,889 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Ledger Name and datatype String
-2024-02-20 12:52:47,089 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Ledger Name
-2024-02-20 12:53:43,470 - ERROR - TestESSJobClass - test_ess_job - TimeoutException occurred: Message: 
-Stacktrace:
-	GetHandleVerifier [0x00007FF611242142+3514994]
-	(No symbol) [0x00007FF610E60CE2]
-	(No symbol) [0x00007FF610D076AA]
-	(No symbol) [0x00007FF610D51860]
-	(No symbol) [0x00007FF610D5197C]
-	(No symbol) [0x00007FF610D94EE7]
-	(No symbol) [0x00007FF610D7602F]
-	(No symbol) [0x00007FF610D928F6]
-	(No symbol) [0x00007FF610D75D93]
-	(No symbol) [0x00007FF610D44BDC]
-	(No symbol) [0x00007FF610D45C64]
-	GetHandleVerifier [0x00007FF61126E16B+3695259]
-	GetHandleVerifier [0x00007FF6112C6737+4057191]
-	GetHandleVerifier [0x00007FF6112BE4E3+4023827]
-	GetHandleVerifier [0x00007FF610F904F9+689705]
-	(No symbol) [0x00007FF610E6C048]
-	(No symbol) [0x00007FF610E68044]
-	(No symbol) [0x00007FF610E681C9]
-	(No symbol) [0x00007FF610E588C4]
-	BaseThreadInitThunk [0x00007FFB43047344+20]
-	RtlUserThreadStart [0x00007FFB44CA26B1+33]
-
-Traceback (most recent call last):
-  File "E:\selenium\ERPE2E\tests\test_ess_job.py", line 306, in test_ess_job
-    element_explicit = wait.until(EC.presence_of_element_located((By.XPATH, "//table[tbody/tr[td[contains(text(),'Confirmation')]] and tbody/tr[td[contains(text(),'Your changes were saved.')]]]")))
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "E:\selenium\py_automate\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
-    raise TimeoutException(message, screen, stacktrace)
-selenium.common.exceptions.TimeoutException: Message: 
-Stacktrace:
-	GetHandleVerifier [0x00007FF611242142+3514994]
-	(No symbol) [0x00007FF610E60CE2]
-	(No symbol) [0x00007FF610D076AA]
-	(No symbol) [0x00007FF610D51860]
-	(No symbol) [0x00007FF610D5197C]
-	(No symbol) [0x00007FF610D94EE7]
-	(No symbol) [0x00007FF610D7602F]
-	(No symbol) [0x00007FF610D928F6]
-	(No symbol) [0x00007FF610D75D93]
-	(No symbol) [0x00007FF610D44BDC]
-	(No symbol) [0x00007FF610D45C64]
-	GetHandleVerifier [0x00007FF61126E16B+3695259]
-	GetHandleVerifier [0x00007FF6112C6737+4057191]
-	GetHandleVerifier [0x00007FF6112BE4E3+4023827]
-	GetHandleVerifier [0x00007FF610F904F9+689705]
-	(No symbol) [0x00007FF610E6C048]
-	(No symbol) [0x00007FF610E68044]
-	(No symbol) [0x00007FF610E681C9]
-	(No symbol) [0x00007FF610E588C4]
-	BaseThreadInitThunk [0x00007FFB43047344+20]
-	RtlUserThreadStart [0x00007FFB44CA26B1+33]
-
-
-2024-02-20 12:53:45,508 - INFO - TestESSJobClass - test_ess_job - Start processing of job : AARC GL Journal FBDI Validation Report_1502__11
-2024-02-20 12:53:49,186 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Source and datatype String
-2024-02-20 12:53:54,405 - ERROR - TestESSJobClass - process_parameter - An unexpected error occurred while processing parameter: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=121.0.6167.185)
-Stacktrace:
-	GetHandleVerifier [0x00007FF611242142+3514994]
-	(No symbol) [0x00007FF610E60CE2]
-	(No symbol) [0x00007FF610D076AA]
-	(No symbol) [0x00007FF610CE0AFD]
-	(No symbol) [0x00007FF610D7CB1B]
-	(No symbol) [0x00007FF610D9218F]
-	(No symbol) [0x00007FF610D75D93]
-	(No symbol) [0x00007FF610D44BDC]
-	(No symbol) [0x00007FF610D45C64]
-	GetHandleVerifier [0x00007FF61126E16B+3695259]
-	GetHandleVerifier [0x00007FF6112C6737+4057191]
-	GetHandleVerifier [0x00007FF6112BE4E3+4023827]
-	GetHandleVerifier [0x00007FF610F904F9+689705]
-	(No symbol) [0x00007FF610E6C048]
-	(No symbol) [0x00007FF610E68044]
-	(No symbol) [0x00007FF610E681C9]
-	(No symbol) [0x00007FF610E588C4]
-	BaseThreadInitThunk [0x00007FFB43047344+20]
-	RtlUserThreadStart [0x00007FFB44CA26B1+33]
-
-Traceback (most recent call last):
-  File "E:\selenium\ERPE2E\tests\test_ess_job.py", line 51, in process_parameter
-    self.process_string_parameter(parameter=parameter)
-  File "E:\selenium\ERPE2E\tests\test_ess_job.py", line 164, in process_string_parameter
-    self.wait_until_element_present(self.driver, (By.XPATH, "//label[text()='Parameter Prompt']/following::input[@type='text'][1]"))
-  File "E:\selenium\ERPE2E\tests\test_ess_job.py", line 32, in wait_until_element_present
-    element = wait.until(EC.presence_of_element_located(locator))
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "E:\selenium\py_automate\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
-    value = method(self._driver)
-            ^^^^^^^^^^^^^^^^^^^^
-  File "E:\selenium\py_automate\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 84, in _predicate
-    return driver.find_element(*locator)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "E:\selenium\py_automate\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
-    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "E:\selenium\py_automate\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
-    self.error_handler.check_response(response)
-  File "E:\selenium\py_automate\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=121.0.6167.185)
-Stacktrace:
-	GetHandleVerifier [0x00007FF611242142+3514994]
-	(No symbol) [0x00007FF610E60CE2]
-	(No symbol) [0x00007FF610D076AA]
-	(No symbol) [0x00007FF610CE0AFD]
-	(No symbol) [0x00007FF610D7CB1B]
-	(No symbol) [0x00007FF610D9218F]
-	(No symbol) [0x00007FF610D75D93]
-	(No symbol) [0x00007FF610D44BDC]
-	(No symbol) [0x00007FF610D45C64]
-	GetHandleVerifier [0x00007FF61126E16B+3695259]
-	GetHandleVerifier [0x00007FF6112C6737+4057191]
-	GetHandleVerifier [0x00007FF6112BE4E3+4023827]
-	GetHandleVerifier [0x00007FF610F904F9+689705]
-	(No symbol) [0x00007FF610E6C048]
-	(No symbol) [0x00007FF610E68044]
-	(No symbol) [0x00007FF610E681C9]
-	(No symbol) [0x00007FF610E588C4]
-	BaseThreadInitThunk [0x00007FFB43047344+20]
-	RtlUserThreadStart [0x00007FFB44CA26B1+33]
-
-
-2024-02-20 12:53:56,410 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Source
-2024-02-20 12:53:56,457 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Period Year and datatype String
+2024-03-19 12:14:10,149 - INFO - TestESSJobClass - test_ess_job - Logged in successfully
+2024-03-19 12:14:15,164 - INFO - TestESSJobClass - test_ess_job - Start processing of job : AARC GL Journal FBDI Validation Report_15021_10_1
+2024-03-19 12:14:27,469 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Source and datatype String
+2024-03-19 12:14:43,237 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Source
+2024-03-19 12:14:43,274 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Period Year and datatype String
+2024-03-19 12:14:59,341 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Period Year
+2024-03-19 12:14:59,407 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Period Name and datatype String
+2024-03-19 12:15:15,139 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Period Name
+2024-03-19 12:15:15,193 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Status and datatype String
+2024-03-19 12:15:31,069 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Status
+2024-03-19 12:15:31,100 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Batch Name and datatype String
+2024-03-19 12:15:46,780 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Batch Name
+2024-03-19 12:15:46,819 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Creation Date From and datatype Date or time
+2024-03-19 12:15:52,399 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Creation Date From
+2024-03-19 12:15:52,455 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Creation Date To and datatype Date or time
+2024-03-19 12:15:58,390 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Creation Date To
+2024-03-19 12:15:58,420 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : From Period and datatype String
+2024-03-19 12:16:14,371 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : From Period
+2024-03-19 12:16:14,409 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : To Period and datatype String
+2024-03-19 12:16:30,304 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : To Period
+2024-03-19 12:16:30,349 - INFO - TestESSJobClass - test_ess_job - Start processing of Parameter : Ledger Name and datatype String
+2024-03-19 12:16:46,720 - INFO - TestESSJobClass - test_ess_job - End processing of Parameter : Ledger Name
+2024-03-19 12:17:21,209 - DEBUG - TestESSJobClass - test_ess_job - confirmation_message Your changes were saved.
+2024-03-19 12:17:21,251 - INFO - TestESSJobClass - test_ess_job - End processing of job : AARC GL Journal FBDI Validation Report_15021_10_1
+2024-03-21 17:32:35,509 - INFO - TestESSJobClass - test_ess_job - Logged in successfully
