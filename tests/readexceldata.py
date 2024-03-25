@@ -40,6 +40,35 @@ def lovs_excel_to_json(file_path):
     # Convert the data list
     return data
 
+def lovs_standard_jobs_to_json(file_path):
+        
+    if is_file_open(file_path):
+        raise Exception(f"Error: File '{file_path}' is already open. Please close the file and try again.")        
+    wb = openpyxl.load_workbook(file_path)
+    sheet = wb['JOBS']
+    # Define an empty list to store the data
+    data = []
+    
+    # Iterate over rows in the Excel sheet, starting from the second row to skip the header
+    for row in sheet.iter_rows(min_row=2, values_only=True):
+        # Create a dictionary to store each row of data
+        row = list(row)
+        for i in range(len(row)):
+            if row[i] is None:
+                row[i] = ""
+        row_data = {
+            'standard_job_name': row[0],
+            'custom_job_name': row[1],
+            'custom_job_id': row[2],
+            'job_path': row[3],
+            'report_id': row[4]
+        }
+        # Append the row dictionary to the data list
+        data.append(row_data)
+    
+    # Convert the data list
+    return data
+
 def jobs_excel_to_json(file_path):
     
     if is_file_open(file_path):
@@ -125,9 +154,27 @@ def get_lovs_source_data(folder_path : str):
     output_json_str = json.dumps(output, indent=4)
     return output_json_str            
 
+def get_standard_jobs_source_data(folder_path : str):
+    # List to store JSON data from all files
+    json_data_array = []        
+
+    # Iterate over files in the folder
+    for filename in os.listdir(folder_path):        
+        if filename.endswith('.xlsx'):
+            file_path = os.path.join(folder_path, filename)
+            json_data = lovs_standard_jobs_to_json(file_path)
+            json_data_array.append(json_data)
+
+    # Convert the array to JSON format
+    output = []
+    for sublist in json_data_array:
+        output.extend(sublist)
+    output_json_str = json.dumps(output, indent=4)
+    return output_json_str            
+
 # Example usage:
-folder_path = '..\data\jobs'
-json_data = get_jobs_source_data(folder_path)
+folder_path = '..\data\standardjobs'
+json_data = get_standard_jobs_source_data(folder_path)
 print(json_data)
 
 # folder_path = '..\data\lovs'

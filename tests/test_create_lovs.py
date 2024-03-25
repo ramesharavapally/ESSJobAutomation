@@ -13,6 +13,7 @@ import traceback
 from selenium.webdriver.common.keys import Keys
 from readexceldata import get_lovs_source_data
 import configparser
+import datetime
 
 class TestESSLovClass(BaseClass):
 
@@ -41,8 +42,10 @@ class TestESSLovClass(BaseClass):
 
     @pytest.mark.lovs
     def test_create_lovs(self):        
+
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         
-        self.logger = SeleniumLogger(log_file='..\logs\lovs.log')
+        self.logger = SeleniumLogger(log_file=f'..\logs\lovs_{timestamp}.log')
 
         url , username , password = self.get_connection_details()                  
 

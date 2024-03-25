@@ -13,6 +13,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 from readexceldata import get_jobs_source_data
 import configparser
+import datetime
 
 class TestESSJobClass(BaseClass):
 
@@ -233,7 +234,8 @@ class TestESSJobClass(BaseClass):
     def test_ess_job(self):  
 
         # Create a logger instance
-        self.logger = SeleniumLogger(log_file='..\logs\jobs.log')
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+        self.logger = SeleniumLogger(log_file=f'..\logs\jobs_{timestamp}.log')
         url , username , password = self.get_connection_details()                  
         self.login(url , username, password)
         # self.login('https://fa-evog-dev1-saasfaprod1.fa.ocs.oraclecloud.com', 'Conversion.User', 'Apps@1234')
