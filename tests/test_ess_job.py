@@ -124,6 +124,9 @@ class TestESSJobClass(BaseClass):
         if parameter.get('DefaultValue') is not None and parameter.get('DefaultValue') != "":
             defaultValueDropDown = Select(self.driver.find_element(By.XPATH, "//td[contains(label, 'Default Value')]/following-sibling::td//select"))
             defaultValueDropDown.select_by_visible_text(parameter['DefaultValue'])
+            if parameter['DefaultValue'] == 'Specific date':
+                default_date = wait.until(EC.presence_of_element_located((By.XPATH, "(//td[label[text()='Default Date']]/following-sibling::td/input)[1]")))
+                default_date.send_keys(parameter['DefaultDate'])                
         if parameter.get('Tooltip') is not None and parameter.get('Tooltip') != "":
             self.driver.find_element(By.XPATH, "(//label[text()='Tooltip Text']/following::td/textarea)[1]").send_keys(parameter['Tooltip'])            
         if parameter.get('DontDisplay') == 'Y':
@@ -307,7 +310,7 @@ class TestESSJobClass(BaseClass):
                                 continue
                         # self.wait_until_element_present(self.driver, (By.XPATH, "//a[img[@title='Create']]"))
                         # self.driver.find_element(By.XPATH, "//a[img[@title='Create']]").click()                        
-                        self.wait_until_element_present(self.driver, (By.XPATH, "//table[.//tr/td/div[text()='Create Parameter']]"))
+                        # self.wait_until_element_present(self.driver, (By.XPATH, "//table[.//tr/td/div[text()='Create Parameter']]"))
                         element_explicit = wait.until(EC.presence_of_element_located((By.XPATH, "//table[.//tr/td/div[text()='Create Parameter']]"))) #wait for popup
                         self.process_parameter(parameter)
                         self.logger.info(f'End processing of Parameter : {parameter["ParameterPrompt"]}')

@@ -63,12 +63,41 @@ class TestStandardESSJobClass(BaseClass):
                 element_explicit = wait.until(EC.presence_of_element_located((By.XPATH, "//label[text()='Display Name']/following::input[1]")))
                 element_explicit.clear()
                 self.driver.find_element(By.XPATH, "//label[text()='Display Name']/following::input[1]").send_keys(job['custom_job_name'])
+                
+                element_explicit = wait.until(EC.presence_of_element_located((By.XPATH, "//label[text()='Name']/following::input[1]")))
+                element_explicit.clear()
                 self.driver.find_element(By.XPATH, "//label[text()='Name']/following::input[1]").send_keys(job['custom_job_id'])
+                
+                element_explicit = wait.until(EC.presence_of_element_located((By.XPATH, "//label[text()='Path']/following::input[1]")))
+                element_explicit.clear()
                 self.driver.find_element(By.XPATH, "//label[text()='Path']/following::input[1]").send_keys(job['job_path'])
                 
-
+                element_explicit = wait.until(EC.presence_of_element_located((By.XPATH, "//label[text()='Report ID']/following::input[1]")))
+                element_explicit.clear()
                 self.driver.find_element(By.XPATH, "//label[text()='Report ID']/following::input[1]").send_keys(job['report_id'])
                 
+                if "parameters" in job:
+                    if len(job['parameters']) >0:
+                        for param in job['parameters']:
+                            if param["Display"] == 'N':                                
+                                elm_path = f'''//table[@summary="{{ESS_JOB_DEFINITION_NAME}}: Parameters"]/tbody/tr[td//span[text()="{param["Parameter"]}"]]'''                                
+                                element_explicit = wait.until(EC.presence_of_element_located((By.XPATH, elm_path))) #wait for popup
+                                element = self.driver.find_element(By.XPATH, elm_path)
+                                actions = ActionChains(self.driver)
+                                actions.move_to_element(element).click().perform()                
+                                time.sleep(1)
+                                self.driver.find_element(By.XPATH , "//img[@title='Edit']").click()                                
+                                element_explicit = wait.until(EC.presence_of_element_located((By.XPATH, "(//table[.//tr/td/div[text()='Edit Parameter']])[1]"))) #wait for popup
+                                element_explicit = wait.until(EC.presence_of_element_located((By.XPATH, f"//label[text()='Parameter Prompt']/following::input[@type='text' and @value='{param['Parameter']}']"))) #wait for popup
+                                required_checkbox_element = self.driver.find_element(By.XPATH, """//label[text()='Required']/preceding-sibling::input[@type='checkbox']""")                                
+                                display_checkbox_element = self.driver.find_element(By.XPATH, """//label[text()="Don't display"]/preceding-sibling::input[@type='checkbox']""")                                            
+                                if required_checkbox_element.get_attribute("checked") == 'true':
+                                    actions = ActionChains(self.driver)
+                                    actions.move_to_element(required_checkbox_element).click().perform()                                                                 
+                                actions = ActionChains(self.driver)
+                                actions.move_to_element(display_checkbox_element).click().perform() 
+                                self.driver.find_element(By.XPATH, "//button[@title='Save and Close']").click()                                                                    
+                                time.sleep(2)
                 self.driver.find_element(By.XPATH, "//button[contains(text(),'ave and Close')]").click()
                 
                 element_explicit = wait.until(EC.presence_of_element_located((By.XPATH, "//table[tbody/tr[td[contains(text(),'Confirmation')]] and tbody/tr[td[contains(text(),'Your changes were saved.')]]]")))

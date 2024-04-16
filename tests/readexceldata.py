@@ -45,29 +45,42 @@ def lovs_standard_jobs_to_json(file_path):
     if is_file_open(file_path):
         raise Exception(f"Error: File '{file_path}' is already open. Please close the file and try again.")        
     wb = openpyxl.load_workbook(file_path)
-    sheet = wb['JOBS']
+    sheet1 = wb['Header']
     # Define an empty list to store the data
-    data = []
+    # data = []
     
-    # Iterate over rows in the Excel sheet, starting from the second row to skip the header
-    for row in sheet.iter_rows(min_row=2, values_only=True):
-        # Create a dictionary to store each row of data
+    data_sheet1 = {}
+    for row in sheet1.iter_rows(min_row=2, values_only=True):
         row = list(row)
         for i in range(len(row)):
             if row[i] is None:
                 row[i] = ""
-        row_data = {
-            'standard_job_name': row[0],
-            'custom_job_name': row[1],
-            'custom_job_id': row[2],
-            'job_path': row[3],
-            'report_id': row[4]
+        # print(row[0] , row[1])
+        data_sheet1[row[0]] = row[1]
+        
+    # Extract data from Sheet2
+    sheet2 = wb['Parameters']
+    parameters = []
+    for row in sheet2.iter_rows(min_row=2, values_only=True):
+        row = list(row)
+        for i in range(len(row)):
+            if row[i] is None:
+                row[i] = ""
+        parameter = {
+            "Parameter": row[0],
+            "Display": row[1]            
         }
-        # Append the row dictionary to the data list
-        data.append(row_data)
+        parameters.append(parameter)
+        
+    # Construct the final JSON object
+    # print(data_sheet1)
+    output_json = {
+        **data_sheet1,
+        "parameters": parameters
+    }
+    # print(output_json)
     
-    # Convert the data list
-    return data
+    return output_json
 
 def jobs_excel_to_json(file_path):
     
@@ -109,7 +122,8 @@ def jobs_excel_to_json(file_path):
             "Tooltip": row[10],
             "DontDisplay": row[11],
             "ShowType":row[12],
-            "DefaultDateFormat" :row[13]
+            "DefaultDateFormat" :row[13],
+            "DefaultDate" :row[14]
         }
         parameters.append(parameter)
 
@@ -167,9 +181,10 @@ def get_standard_jobs_source_data(folder_path : str):
 
     # Convert the array to JSON format
     output = []
-    for sublist in json_data_array:
-        output.extend(sublist)
-    output_json_str = json.dumps(output, indent=4)
+    # print(json_data_array)
+    for sublist in json_data_array:        
+        output.append(sublist)    
+    output_json_str = json.dumps(output, indent=4)    
     return output_json_str            
 
 # Example usage:
