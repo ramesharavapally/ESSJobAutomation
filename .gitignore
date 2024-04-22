@@ -1,2 +1,3 @@
 py_automate/
 chromedriver.exe
+tests/__pycache__

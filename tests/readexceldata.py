@@ -1,6 +1,7 @@
 import openpyxl
 import json
 import os
+from datetime import datetime
 
 
 def is_file_open(file_path):
@@ -11,17 +12,38 @@ def is_file_open(file_path):
     except PermissionError:
         return True    
 
+def read_sheet_as_strings(file_path, sheet_name):
+    # Load the workbook
+    workbook = openpyxl.load_workbook(file_path, data_only=True)
+
+    # Extract data from the specified sheet
+    sheet = workbook[sheet_name]
+    data_sheet = []
+
+    for row in sheet.iter_rows(min_row=2, values_only=True):
+        row_data = []
+        for cell in row:
+            if cell is None:
+                row_data.append("")  # Treat None as an empty string
+            else:
+                if isinstance(cell , datetime):
+                    cell = str(datetime.strftime(cell , '%m/%d/%y'))
+                row_data.append(str(cell))  # Convert cell value to string
+        data_sheet.append(row_data)
+
+    return data_sheet
+
 def lovs_excel_to_json(file_path):
         
     if is_file_open(file_path):
-        raise Exception(f"Error: File '{file_path}' is already open. Please close the file and try again.")        
-    wb = openpyxl.load_workbook(file_path)
-    sheet = wb['LOVS']
+        raise Exception(f"Error: File '{file_path}' is already open. Please close the file and try again.")            
+    sheet = read_sheet_as_strings(file_path= file_path , sheet_name='LOVS')
+    
     # Define an empty list to store the data
     data = []
     
-    # Iterate over rows in the Excel sheet, starting from the second row to skip the header
-    for row in sheet.iter_rows(min_row=2, values_only=True):
+    # Iterate over rows in the Excel sheet, starting from the second row to skip the header    
+    for row in sheet:
         # Create a dictionary to store each row of data
         row = list(row)
         for i in range(len(row)):
@@ -43,14 +65,15 @@ def lovs_excel_to_json(file_path):
 def lovs_standard_jobs_to_json(file_path):
         
     if is_file_open(file_path):
-        raise Exception(f"Error: File '{file_path}' is already open. Please close the file and try again.")        
-    wb = openpyxl.load_workbook(file_path)
-    sheet1 = wb['Header']
+        raise Exception(f"Error: File '{file_path}' is already open. Please close the file and try again.")            
+        
+    sheet1 = read_sheet_as_strings(file_path= file_path , sheet_name='Header')
     # Define an empty list to store the data
     # data = []
     
     data_sheet1 = {}
-    for row in sheet1.iter_rows(min_row=2, values_only=True):
+    # for row in sheet1.iter_rows(min_row=2, values_only=True):
+    for row in sheet1:
         row = list(row)
         for i in range(len(row)):
             if row[i] is None:
@@ -58,10 +81,10 @@ def lovs_standard_jobs_to_json(file_path):
         # print(row[0] , row[1])
         data_sheet1[row[0]] = row[1]
         
-    # Extract data from Sheet2
-    sheet2 = wb['Parameters']
-    parameters = []
-    for row in sheet2.iter_rows(min_row=2, values_only=True):
+    # Extract data from Sheet2    
+    sheet2 = read_sheet_as_strings(file_path=file_path , sheet_name='Parameters')
+    parameters = []    
+    for row in sheet2:
         row = list(row)
         for i in range(len(row)):
             if row[i] is None:
@@ -72,8 +95,7 @@ def lovs_standard_jobs_to_json(file_path):
         }
         parameters.append(parameter)
         
-    # Construct the final JSON object
-    # print(data_sheet1)
+    # Construct the final JSON object    
     output_json = {
         **data_sheet1,
         "parameters": parameters
@@ -85,25 +107,23 @@ def lovs_standard_jobs_to_json(file_path):
 def jobs_excel_to_json(file_path):
     
     if is_file_open(file_path):
-        raise Exception(f"Error: File '{file_path}' is already open. Please close the file and try again.")        
-    # Load the Excel file
-    data = []
-    workbook = openpyxl.load_workbook(file_path)
+        raise Exception(f"Error: File '{file_path}' is already open. Please close the file and try again.")            
 
-    # Extract data from Sheet1
-    sheet1 = workbook['Header']
-    data_sheet1 = {}
-    for row in sheet1.iter_rows(min_row=2, values_only=True):
+    # Extract data from Sheet1    
+    sheet1 = read_sheet_as_strings(file_path=file_path , sheet_name='Header')
+    print(sheet1)
+    data_sheet1 = {}    
+    for row in sheet1:
         row = list(row)
         for i in range(len(row)):
             if row[i] is None:
                 row[i] = ""
         data_sheet1[row[0]] = row[1]
 
-    # Extract data from Sheet2
-    sheet2 = workbook['Parameters']
-    parameters = []
-    for row in sheet2.iter_rows(min_row=2, values_only=True):
+    # Extract data from Sheet2    
+    sheet2 = read_sheet_as_strings(file_path=file_path , sheet_name='Parameters')
+    parameters = []    
+    for row in sheet2:
         row = list(row)
         for i in range(len(row)):
             if row[i] is None:
@@ -147,6 +167,8 @@ def get_jobs_source_data(folder_path : str):
             json_data_array.append(json_data)
 
     # Convert the array to JSON format
+    # json_data_array = [item.decode('utf-8') if isinstance(item, bytes) else item for item in json_data_array]
+    # print(json.loads(json_data_array))
     output_json_str = json.dumps(json_data_array, indent=4)
     return output_json_str  
 
@@ -188,8 +210,8 @@ def get_standard_jobs_source_data(folder_path : str):
     return output_json_str            
 
 # Example usage:
-folder_path = '..\data\standardjobs'
-json_data = get_standard_jobs_source_data(folder_path)
+folder_path = '..\data\jobs'
+json_data = get_jobs_source_data(folder_path)
 print(json_data)
 
 # folder_path = '..\data\lovs'
